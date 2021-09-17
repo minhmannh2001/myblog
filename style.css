@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden;
-    height: 100vh;
-}
-
 /* Bootstrap custom configure */
 .container {
     min-width: 1300px;
@@ -21,6 +16,7 @@ body {
 /* PAGE HEADER */
 
 .page-header {
+    padding: 0 125px 0 134px;
     width: 100%;
     height: 70px;
     display: flex;
@@ -29,11 +25,8 @@ body {
 }
 
 .seperator {
-    position: absolute;
-    top: 70px;
-    width: 100vw;
-    height: 2px;
-    border-bottom: 2px solid #eeeeee;
+    margin-top: 0;
+    background-color: #eeeeee;
 }
 
 .blog-logo {
@@ -277,7 +270,10 @@ body {
 .popular-articles-item-thumbnail {
     height: 65px;
     width: 90px;
-    background-color: gray;
+    background-image: url('travel-world-landmarks-background-blue-sky-46083021.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .popular-articles-item-information {
@@ -286,6 +282,15 @@ body {
 
 .popular-articles-item-title {
 
+}
+
+.popular-articles-item-link {
+    color: #21313d;
+}
+
+.popular-articles-item-link:hover {
+    color: #21313d;
+    text-decoration: none;
 }
 
 .popular-articles-item-time {
@@ -337,7 +342,7 @@ body {
 .archive-section {
     border: 2px solid #eeeeee;
     width: 300px;
-    height: 350px;
+    height: 340px;
     margin-bottom: 45px;
 }
 
