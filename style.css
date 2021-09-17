@@ -1,0 +1,509 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+/* Bootstrap custom configure */
+.container {
+    min-width: 1300px;
+}
+
+body {
+    position: relative;
+}
+
+/* PAGE HEADER */
+
+.page-header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.seperator {
+    position: absolute;
+    top: 70px;
+    width: 100vw;
+    height: 2px;
+    border-bottom: 2px solid #eeeeee;
+}
+
+.blog-logo {
+    background-color: #333333;
+    width: 110px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    margin-left: 15px;
+}
+
+.page-navigation {
+    display: flex;
+    margin-right: -25px;
+}
+
+.navigation-area {
+    display: flex;
+}
+
+.navigation-button {
+    position: relative;
+    margin: 0 16px 0 16px;
+    font-size: 20px;
+}
+
+.navigation-button-layout:hover .navigation-button-layout-menu {
+    display: flex;
+}
+
+.navigation-button-layout-menu::before {
+    content: "";
+    top: -24px;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+}
+
+.navigation-button-layout-menu {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    list-style-type: none;
+    width: 160px;
+    height: 90px;
+    box-shadow: 0px 0px 3px 0px #c5c5c5;
+    background-color: white;
+    z-index: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 18px;
+    cursor: default;
+    display: none;
+}
+
+.navigation-button-layout-item {
+    padding-left: 20px;
+    height: 45px;
+    line-height: 45px;
+    display: block;
+}
+
+.navigation-button-layout-item:hover {
+    background-color: rgba(214, 214, 214, 0.2);
+    cursor: pointer;
+}
+
+.navigation-button:hover, .user-area:hover {
+    cursor: pointer;
+}
+
+.down-arrow-icon {
+    font-size: 16px;
+}
+
+/* USER */
+.user-area {
+    position: relative;
+    margin: 0 16px 0 16px;
+}
+
+.user-area:hover .user-menu {
+    display: block;
+}
+
+.user-menu {
+    position: absolute;
+    top: 52px;
+    right: -10px;
+    list-style: none;
+    width: 160px;
+    height: 90px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 0px #c5c5c5;
+    display: none;
+    z-index: 1;
+}
+
+.user-menu::before {
+    content: "";
+    top: -44px;
+    right: 0px;
+    position: absolute;
+    width: 50px;
+    height: 60px;
+}
+
+.user-menu-item {
+    font-size: 18px;
+    line-height: 45px;
+    padding-left: 20px;
+}
+
+.user-menu-item:hover {
+    background-color: rgba(214, 214, 214, 0.2);
+    cursor: pointer;
+}
+
+/* PAGE BODY */
+
+.page-body {
+    height: auto;
+    margin-top: 100px;
+}
+
+/* PAGE CONTENT */
+
+.row {
+    margin-left:0px;
+    margin-right:0px;
+}
+
+.page-content {
+    /* margin-right: 15px; */
+}
+
+.page-sidebar {
+    /* margin-left: 15px; */
+}
+
+/* SIDEBAR - SEARCH SECTION */
+.search-section {
+    border: 2px solid #eeeeee;    
+    width: 300px;
+    height: 185px;
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-label, .categories-label, 
+.popular-articles-label, .tag-section-label, 
+.archive-section-label, .quote-section-label {
+    font-weight: 700;
+    font-size: 22px;
+    color: #382f2f;
+    margin-left: 35px;
+    margin-top: 35px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 35px;
+    margin-top: 25px;
+}
+
+.search-input {
+    height: 38px;
+    width: 186px;
+    border-radius: 3px 0 0 3px;
+    border: 1px solid #cecccc;
+    outline: none;
+    text-indent: 12px;
+}
+
+.search-button {
+    height: 38px;
+    margin-left: -10px;
+    border-top: 1px solid #007bff !important;
+    border-right: 1px solid #007bff !important;
+    border-bottom: 1px solid #007bff !important;
+}
+
+/* ************************* */
+
+/* SIDEBAR - CATEGORIES SECTION */
+.categories-section {
+    border: 2px solid #eeeeee;
+    width: 300px;
+    height: 340px;
+    margin-bottom: 45px;
+}
+
+#categories-list {
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+.categories-item {
+    margin-left: 35px;
+    color: #7c7c75;
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.categories-item:hover {
+    text-decoration: none;
+}
+
+/* **************************** */
+
+/* SIDEBAR - POPULAR ARTICLES SECTION */
+
+.popular-articles-section {
+    border: 2px solid #eeeeee;
+    width: 300px;
+    height: 465px;
+    margin-bottom: 45px;
+}
+
+#popular-articles-list {
+    margin-top: 30px;
+    list-style-type: none;
+}
+
+.popular-articles-item {
+    margin-left: 35px;
+    margin-top: 15px;
+}
+
+.popular-articles-item-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.popular-articles-item-thumbnail {
+    height: 65px;
+    width: 90px;
+    background-color: gray;
+}
+
+.popular-articles-item-information {
+    margin-left: 15px;
+}
+
+.popular-articles-item-title {
+
+}
+
+.popular-articles-item-time {
+
+}
+
+/* ********************************** */
+
+/* SIDEBAR - TAGS SECTION */
+.tag-section {
+    border: 2px solid #eeeeee;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 45px;
+}
+
+.tag-section-wrapper {
+    display: flex;
+    margin-left: 35px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.tag-item-link {
+    display: inline-flex;
+    color: #7c7c75;
+}
+
+.tag-item-link:hover {
+    text-decoration: none;
+}
+
+.tag-item {
+    background-color: #f1f2f3;
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.tag-item:hover {
+    cursor: pointer;
+}
+
+/* ********************** */
+
+/* SIDEBAR - ARCHIVES SECTION */
+
+.archive-section {
+    border: 2px solid #eeeeee;
+    width: 300px;
+    height: 350px;
+    margin-bottom: 45px;
+}
+
+#archive {
+
+}
+
+.archive-list {
+    list-style: none;
+}
+
+.archive-item {
+    display: inline-flex;
+    margin-left: 32px;
+    justify-content: space-between;
+    min-width: 230px;
+    padding: 10px 0 10px 0;
+    border-bottom: 2px solid #e9ebee;
+    color: #7c7c75;
+}
+
+.archive-item:last-child {
+    border-bottom: none;
+}
+
+.archive-item-label {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.archive-item-quantity {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+/* ************************** */
+
+/* SIDEBAR - QUOTE SECTION */
+
+.quote-section {
+    border: 2px solid #eeeeee;
+    width: 300px;
+    height: 250px;
+    margin-bottom: 45px;
+}
+
+.quote-content {
+    margin-top: 35px;
+    margin-left: 32px;
+}
+
+.quote-author {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* *********************** */
+
+.page-footer {
+    margin-top: 100px;
+    height: 50px;
+    background-color: #f8f9fa;
+}
+
+.page-designer {
+    display: block;
+    text-align: center;
+    width: 100%;
+    line-height: 50px;
+}
+
+/* BLOG */
+
+.blogs {
+
+}
+
+.blogs-list {
+    list-style-type: none;
+}
+
+.blog-item {
+    background-color: #f8f9fa;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 250px;
+    align-items: center;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 0px #000000;
+}
+
+.blog-item:last-child {
+    margin-bottom: 0;
+}
+
+.blog-item-thumbnail {
+    height: 250px;
+    width: 250px;
+    background-image: url('travel-world-landmarks-background-blue-sky-46083021.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.blog-item-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+    flex-grow: 1;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.blog-item-information {
+    border-bottom: 2px solid #e2e3e4;
+    padding-bottom: 20px;
+}
+
+.blog-item-type {
+    font-size: 16px;
+    font-weight: bold;
+    color: #26a5f5;
+}
+
+.blog-item-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.blog-item-title-link {
+    color: #333333;
+}
+
+.blog-item-title-link:hover {
+    color: #333333;
+}
+
+.blog-item-description {
+    font-size: 20px;
+}
+
+.blog-item-additional-information {
+    display: flex;
+    justify-content: space-between;
+}   
+
+.blog-item-created-time {
+
+}
+
+.blog-item-author {
+
+}
+
+.blog-author {
+
+}
+
+.blog-item-author-link:hover, .blog-item-type-link:hover, .blog-item-title-link:hover {
+    text-decoration: none;
+}
+
+/* **** */
